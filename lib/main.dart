@@ -1,10 +1,11 @@
+import 'package:barberbooking/pages/HomePage.dart';
 import 'package:flutter/material.dart';
-import 'package:barberbooking/Pages/LoginPage.dart';
 
 void main() {
   runApp(
     MaterialApp(
-      home: LoginPage(),
+      debugShowCheckedModeBanner: false,
+      home: HomePage(),
     ),
   );
 }

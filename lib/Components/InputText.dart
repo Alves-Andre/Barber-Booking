@@ -6,24 +6,29 @@ class InputText extends StatelessWidget {
   final String? type;
   final bool? obscureText;
   final Icon? prefixIcon;
-  const InputText({super.key, this.type, this.obscureText, this.prefixIcon, required this.text, required this.width});
+  const InputText(
+      {this.type,
+      this.obscureText,
+      this.prefixIcon,
+      required this.text,
+      required this.width});
 
   @override
   Widget build(BuildContext context) {
     return Container(
       width: width,
       child: TextFormField(
-                validator: validateEmail,
-                obscureText: obscureText ?? false,
-                decoration: InputDecoration(
-                  prefixIconColor: Color.fromARGB(255, 0, 0, 0),
-                  hintText: type,
-                  prefixIcon: prefixIcon,
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(15),
-                  ),
-                ),
-              ),
+        validator: validateEmail,
+        obscureText: obscureText ?? false,
+        decoration: InputDecoration(
+          prefixIconColor: Color.fromARGB(255, 0, 0, 0),
+          hintText: type,
+          prefixIcon: prefixIcon,
+          border: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(15),
+          ),
+        ),
+      ),
     );
   }
 }

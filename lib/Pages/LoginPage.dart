@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:barberbooking/Pages/HomePage.dart';
-import 'package:barberbooking/Components/LoginButton.dart';
-import 'package:barberbooking/Components/InputText.dart';
-import 'package:barberbooking/Components/Label.dart';
-import 'package:barberbooking/Pages/RegisterPage.dart';
-import 'package:barberbooking/Pages/RememberPage.dart';
+import '../Components/Label.dart';
+import '../Components/InputText.dart';
+import '../Components/LoginButton.dart';
+import './RememberPage.dart';
+import './HomePage.dart';
+import './RegisterPage.dart';
 
 class LoginPage extends StatelessWidget {
-  const LoginPage({super.key});
+  const LoginPage();
 
   @override
   Widget build(BuildContext context) {
@@ -37,7 +37,8 @@ class LoginPage extends StatelessWidget {
                     color: Color.fromARGB(255, 0, 0, 0),
                   ),
                   const Label(
-                    text: "Por favor informe seu e-mail e senha para entrar na sua conta.",
+                    text:
+                        "Por favor informe seu e-mail e senha para entrar na sua conta.",
                     fontSize: 16,
                     color: Color(0xFF6B7280),
                     width: 325,
@@ -49,14 +50,24 @@ class LoginPage extends StatelessWidget {
                     color: Color.fromARGB(255, 0, 0, 0),
                     padding: EdgeInsets.only(bottom: 10),
                   ),
-                  const InputText(text: "Usuário", width: 330, prefixIcon: Icon(Icons.email), type: "e-mail"),
+                  const InputText(
+                      text: "Usuário",
+                      width: 330,
+                      prefixIcon: Icon(Icons.email),
+                      type: "e-mail"),
                   const Label(
                     text: "Senha",
                     fontSize: 14,
                     color: Color.fromARGB(255, 0, 0, 0),
                     padding: EdgeInsets.only(bottom: 10, top: 10),
                   ),
-                  const InputText(text: "Senha", width: 330, prefixIcon: Icon(Icons.key_rounded), type: "password", obscureText: true,),
+                  const InputText(
+                    text: "Senha",
+                    width: 330,
+                    prefixIcon: Icon(Icons.key_rounded),
+                    type: "password",
+                    obscureText: true,
+                  ),
                   TextButton(
                     onPressed: () {
                       Navigator.push(
@@ -91,7 +102,8 @@ class LoginPage extends StatelessWidget {
                         onPressed: () {
                           Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) => RegisterPage()),
+                            MaterialPageRoute(
+                                builder: (context) => RegisterPage()),
                           );
                         },
                         child: const Label(

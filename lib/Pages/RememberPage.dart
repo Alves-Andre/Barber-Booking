@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class RememberPage extends StatelessWidget {
-  const RememberPage({super.key});
+  const RememberPage();
 
   @override
   Widget build(BuildContext context) {

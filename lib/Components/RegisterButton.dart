@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:barberbooking/Pages/HomePage.dart';
-import 'package:barberbooking/Pages/LoginPage.dart';
+import '../pages/LoginPage.dart';
 
 void Function() navegarLoginPage(BuildContext context) {
   return () {
@@ -14,7 +13,7 @@ void Function() navegarLoginPage(BuildContext context) {
 class RegisterButton extends StatelessWidget {
   final String text;
   final Widget route;
-  const RegisterButton({super.key, required this.text, required this.route});
+  const RegisterButton({required this.text, required this.route});
 
   @override
   Widget build(BuildContext context) {
@@ -31,9 +30,10 @@ class RegisterButton extends StatelessWidget {
         ),
         onPressed: () {
           Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => route,)
-          );
+              context,
+              MaterialPageRoute(
+                builder: (context) => route,
+              ));
         },
         child: Text(text),
       ),

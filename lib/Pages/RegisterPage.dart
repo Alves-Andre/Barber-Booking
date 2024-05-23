@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:barberbooking/Components/RegisterButton.dart';
-import 'package:barberbooking/Components/InputText.dart';
-import 'package:barberbooking/Components/Label.dart';
-import 'package:barberbooking/Pages/HomePage.dart';
+import '../Components/Label.dart';
+import '../Components/InputText.dart';
+import '../Components/RegisterButton.dart';
+import './HomePage.dart';
 
 class RegisterPage extends StatelessWidget {
   @override
@@ -102,7 +102,8 @@ class RegisterPage extends StatelessWidget {
                     children: [
                       const Expanded(
                         child: Label(
-                          text: "Ao clicar em Registre-se você está concordando com os ",
+                          text:
+                              "Ao clicar em Registre-se você está concordando com os ",
                           fontSize: 11,
                           color: Color.fromARGB(255, 0, 0, 0),
                         ),
