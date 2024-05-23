@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:barberbooking/Pages/HomePage.dart';
 
-class Button extends StatelessWidget {
+class LoginButton extends StatelessWidget {
   final String text;
   final Widget route;
-  const Button({super.key, required this.text, required this.route});
+  const LoginButton({super.key, required this.text, required this.route});
 
   @override
   Widget build(BuildContext context) {
@@ -18,6 +18,8 @@ class Button extends StatelessWidget {
         ),
       ),
       onPressed: () {
+        //validar login
+        
         Navigator.push(
           context,
           MaterialPageRoute(builder: (context) => route,)

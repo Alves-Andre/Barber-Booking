@@ -1,52 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:barberbooking/Pages/HomePage.dart';
-import 'package:flutter/widgets.dart';
-import 'package:barberbooking/Components/Button.dart';
+import 'package:barberbooking/Components/LoginButton.dart';
 import 'package:barberbooking/Components/InputText.dart';
 import 'package:barberbooking/Components/Label.dart';
 import 'package:barberbooking/Pages/RegisterPage.dart';
 import 'package:barberbooking/Pages/RememberPage.dart';
-
-void Function() navegarLoginPage(BuildContext context) {
-  // Altere o tipo de retorno para void Function()
-  return () {
-    Navigator.push(
-      context,
-      MaterialPageRoute(builder: (context) => const LoginPage()),
-    );
-  };
-}
-
-void Function() navegarRegisterPage(BuildContext context) {
-  // Altere o tipo de retorno para void Function()
-  return () {
-    Navigator.push(
-      context,
-      MaterialPageRoute(builder: (context) => RegisterPage()),
-    );
-  };
-}
-
-void Function() navegarRememberPage(BuildContext context) {
-  // Altere o tipo de retorno para void Function()
-  return () {
-    Navigator.push(
-      context,
-      MaterialPageRoute(builder: (context) => RememberPage()),
-    );
-  };
-}
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        body: Container(
+    return Scaffold(
+      body: SingleChildScrollView(
+        child: Container(
           padding: EdgeInsets.symmetric(horizontal: 30),
-          // Centraliza a Column verticalmente
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -54,43 +22,48 @@ class LoginPage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Image.asset(
-                    'assets/pictures/logo.jpeg',
-                    width: 200,
-                    height: 200,
+                  Container(
+                    margin: const EdgeInsets.only(bottom: 20),
+                    child: Image.asset(
+                      'assets/pictures/barbearia.jpg',
+                      width: 400,
+                      height: 400,
+                    ),
                   ),
                   const Label(
                     text: "Bem-vindo!!!",
                     fontSize: 28,
-                    color: Color(0xFF6B7280),
+                    fontWeight: FontWeight.bold,
+                    color: Color.fromARGB(255, 0, 0, 0),
                   ),
                   const Label(
-                    text: "Faça login para continuar",
-                    fontSize: 14,
-                    color: Color(0xFF6B7280),
-                  ),
-                  const Label(
-                    text:
-                        "Por favor informe seu e-mail e senha para entrar na sua conta.",
+                    text: "Por favor informe seu e-mail e senha para entrar na sua conta.",
                     fontSize: 16,
                     color: Color(0xFF6B7280),
                     width: 325,
+                    padding: EdgeInsets.only(bottom: 20),
                   ),
                   const Label(
                     text: "Usuário*",
                     fontSize: 14,
                     color: Color.fromARGB(255, 0, 0, 0),
+                    padding: EdgeInsets.only(bottom: 10),
                   ),
-                  const InputText(text: "Usuário", width: 330),
+                  const InputText(text: "Usuário", width: 330, prefixIcon: Icon(Icons.email), type: "e-mail"),
                   const Label(
                     text: "Senha",
                     fontSize: 14,
                     color: Color.fromARGB(255, 0, 0, 0),
+                    padding: EdgeInsets.only(bottom: 10, top: 10),
                   ),
-                  const InputText(text: "Senha", width: 330),
+                  const InputText(text: "Senha", width: 330, prefixIcon: Icon(Icons.key_rounded), type: "password", obscureText: true,),
                   TextButton(
-                    onPressed: navegarRememberPage(
-                        context), // Altere o tipo de retorno para void Function()
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => RememberPage()),
+                      );
+                    },
                     child: const Label(
                       text: "Esqueceu a senha?",
                       fontSize: 14,
@@ -102,7 +75,7 @@ class LoginPage extends StatelessWidget {
               Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  const Button(
+                  LoginButton(
                     text: "Entrar",
                     route: HomePage(),
                   ),
@@ -115,8 +88,12 @@ class LoginPage extends StatelessWidget {
                         color: Color(0xFF6B7280),
                       ),
                       TextButton(
-                        onPressed: navegarRegisterPage(
-                            context), // Altere o tipo de retorno para void Function()
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => RegisterPage()),
+                          );
+                        },
                         child: const Label(
                           text: "Registre-se",
                           fontSize: 14,

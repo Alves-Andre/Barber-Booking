@@ -3,6 +3,8 @@ import 'package:barberbooking/Pages/LoginPage.dart';
 
 void main() {
   runApp(
-    const MaterialApp(
-      home: LoginPage()));
+    MaterialApp(
+      home: LoginPage(),
+    ),
+  );
 }

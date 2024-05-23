@@ -5,16 +5,21 @@ class Label extends StatelessWidget {
   final Color color;
   final String text;
   final double? width;
-  const Label({Key? key, required this.text, this.width, required this.fontSize, required this.color}) : super(key: key);
+  final FontWeight? fontWeight;
+  final EdgeInsets? padding;
+  const Label({Key? key, required this.text, this.padding, this.fontWeight ,this.width, required this.fontSize, required this.color}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return 
     Container(
       width: width,
-      child: Text(text, style: TextStyle(
-      fontSize: fontSize,
-      color: color,
+      padding: padding,
+      child: 
+        Text(text, style: TextStyle(
+          fontSize: fontSize,
+          color: color,
+          fontWeight: fontWeight,
       )),
     );
     
