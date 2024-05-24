@@ -1,6 +1,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <application
+<<<<<<< HEAD
         android:label="barber_booking"
+=======
+        android:label="barberbooking"
+>>>>>>> feature/andre.alves/LoginRegisterPage
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

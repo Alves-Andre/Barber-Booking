@@ -90,12 +90,21 @@ BEGIN
         BLOCK "040904e4"
         BEGIN
             VALUE "CompanyName", "com.example" "\0"
+<<<<<<< HEAD
             VALUE "FileDescription", "barber_booking" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
             VALUE "InternalName", "barber_booking" "\0"
             VALUE "LegalCopyright", "Copyright (C) 2024 com.example. All rights reserved." "\0"
             VALUE "OriginalFilename", "barber_booking.exe" "\0"
             VALUE "ProductName", "barber_booking" "\0"
+=======
+            VALUE "FileDescription", "barberbooking" "\0"
+            VALUE "FileVersion", VERSION_AS_STRING "\0"
+            VALUE "InternalName", "barberbooking" "\0"
+            VALUE "LegalCopyright", "Copyright (C) 2024 com.example. All rights reserved." "\0"
+            VALUE "OriginalFilename", "barberbooking.exe" "\0"
+            VALUE "ProductName", "barberbooking" "\0"
+>>>>>>> feature/andre.alves/LoginRegisterPage
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END

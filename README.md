@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # barber_booking
+=======
+# barberbooking
+>>>>>>> feature/andre.alves/LoginRegisterPage
 
 A new Flutter project.
 
